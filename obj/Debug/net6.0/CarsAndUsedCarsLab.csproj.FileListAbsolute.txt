@@ -1,0 +1,14 @@
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\bin\Debug\net6.0\CarsAndUsedCarsLab.exe
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\bin\Debug\net6.0\CarsAndUsedCarsLab.deps.json
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\bin\Debug\net6.0\CarsAndUsedCarsLab.runtimeconfig.json
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\bin\Debug\net6.0\CarsAndUsedCarsLab.dll
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\bin\Debug\net6.0\CarsAndUsedCarsLab.pdb
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.AssemblyInfoInputs.cache
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.AssemblyInfo.cs
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.csproj.CoreCompileInputs.cache
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.dll
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\refint\CarsAndUsedCarsLab.dll
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.pdb
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\CarsAndUsedCarsLab.genruntimeconfig.cache
+C:\Users\peggy\source\repos\CarsAndUsedCarsLab\obj\Debug\net6.0\ref\CarsAndUsedCarsLab.dll
