@@ -13,13 +13,6 @@ namespace CarsAndUsedCarsLab
             Car.Cars.Add(new UsedCar("GC     ", "Chirpus  ", 2013, 8500, 12345));
             Car.Cars.Add(new UsedCar("GC     ", "Witherell", 2016, 14450, 3500.3));
 
-            Car.NewCars.Add(new Car("Nikolai", "Model S  ", 2017, 54999.9));
-            Car.NewCars.Add(new Car("Fourd  ", "Escapade ", 2017, 31999.9));
-            Car.NewCars.Add(new Car("Chewie ", "Vette    ", 2017, 44989.95));
-            Car.UsedCars.Add(new UsedCar("Hyonda ", "Prior    ", 2015, 14795.5, 35987.6));
-            Car.UsedCars.Add(new UsedCar("GC     ", "Chirpus  ", 2013, 8500, 12345));
-            Car.UsedCars.Add(new UsedCar("GC     ", "Witherell", 2016, 14450, 3500.3));
-
             Console.Write("Username: ");
             string UserName = Console.ReadLine();
             if (UserName.Trim().ToLower().StartsWith("admin"))

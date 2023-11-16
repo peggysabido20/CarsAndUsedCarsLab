@@ -128,15 +128,23 @@ namespace CarsAndUsedCarsLab
                     }
                     break;
                 case 5:
-                    foreach (Car car in Car.NewCars)
+                    System.Type NewCar = typeof(Car);
+                    foreach (Car car in Car.Cars)
                     {
-                        Console.WriteLine(car);
+                        if (car.GetType() == NewCar)
+                        {
+                            Console.WriteLine(car);
+                        }                        
                     }
                     break;
                 case 6:
-                    foreach (Car car in Car.UsedCars)
+                    System.Type UsedCar = typeof(UsedCar);
+                    foreach (Car car in Car.Cars)
                     {
-                        Console.WriteLine(car);
+                        if (car.GetType() == UsedCar)
+                        {
+                            Console.WriteLine(car);
+                        }                        
                     }
                     break;
                 case 7:
@@ -272,7 +280,6 @@ namespace CarsAndUsedCarsLab
             int inputCarYear = 0;
             double inputCarPrice = 0;
             double inputCarMiles = 0;
-            string inputMileage = "";
             do
             {
                 Console.Write("Which car would you like to change?  ");
@@ -281,50 +288,52 @@ namespace CarsAndUsedCarsLab
             } while (MenuNumber < 1 || MenuNumber > Car.Cars.Count);
             Console.WriteLine(Car.Cars[MenuNumber - 1]);
             if (Validator.YesNoValue("Do you want to change this car ") == "y")
-            {                
-                do
+            {               
+                Console.WriteLine($"Make Current Value: {Car.Cars[MenuNumber - 1].CarMake}");
+                Console.Write("Enter make (leave blank if no change needed): ");
+                inputCarMake = Console.ReadLine().Trim();                
+                if (inputCarMake != "")
                 {
-                    Console.Write("Enter make: ");
-                    inputCarMake = Console.ReadLine();
-                } while (inputCarMake == "");
-                do
+                    Car.Cars[MenuNumber - 1].CarMake = inputCarMake;
+                }
+
+                Console.WriteLine($"Model Current Value: {Car.Cars[MenuNumber - 1].CarModel}");
+                Console.Write("Enter model (leave blank if no change needed): ");
+                inputCarModel = Console.ReadLine().Trim();
+                if (inputCarModel != "")
                 {
-                    Console.Write("Enter model: ");
-                    inputCarModel = Console.ReadLine();
-                } while (inputCarModel == "");
-                do
+                    Car.Cars[MenuNumber - 1].CarModel = inputCarModel;
+                }
+
+                Console.WriteLine($"Year Current Value: {Car.Cars[MenuNumber - 1].CarYear}");
+                Console.Write("Enter year (leave blank if no change needed): ");
+                string inputYear = Console.ReadLine();
+                inputCarYear = Validator.validInteger(inputYear);
+                if (inputCarYear > 0)
                 {
-                    Console.Write("Enter year: ");
-                    string inputYear = Console.ReadLine();
-                    inputCarYear = Validator.validInteger(inputYear);
-                } while (inputCarYear == 0);
-                do
+                    Car.Cars[MenuNumber - 1].CarYear = inputCarYear;
+                }
+
+                Console.WriteLine($"Price Current Value: {Car.Cars[MenuNumber - 1].CarPrice}");
+                Console.Write("Enter price (leave blank if no change needed): ");
+                string inputPrice = Console.ReadLine();
+                inputCarPrice = Validator.validDouble(inputPrice);
+                if (inputCarPrice > 0)
                 {
-                    Console.Write("Enter price: ");
-                    string inputPrice = Console.ReadLine();
-                    inputCarPrice = Validator.validDouble(inputPrice);
-                } while (inputCarPrice == 0);
-                do
+                    Car.Cars[MenuNumber - 1].CarPrice = inputCarPrice;
+                }
+                                
+                if (Car.Cars[MenuNumber - 1].GetType() == typeof(UsedCar))
                 {
-                    Console.Write("Enter mileage (for used car) or NA (for new car): ");
-                    inputMileage = Console.ReadLine().Trim().ToLower();
-                    if (inputMileage != "na")                    
+                    Console.WriteLine($"Mileage Current Value: {((UsedCar)Car.Cars[MenuNumber - 1]).CarMileage}");
+                    Console.Write("Enter mileage (leave blank if no change needed): ");
+                    string inputMileage = Console.ReadLine();
+                    inputCarMiles = Validator.validDouble(inputMileage);
+                    if (inputCarMiles > 0)
                     {
-                        inputCarMiles = Validator.validDouble(inputMileage);
-                    }                    
-                } while (inputCarMiles == 0 && inputMileage != "na");
-
-                Car.RemoveCars(MenuNumber - 1);
-
-                if(inputCarMiles == 0)
-                {
-                    Car.Cars.Add(new Car(inputCarMake, inputCarModel, inputCarYear, inputCarPrice));
-                }
-                else
-                {
-                    Car.Cars.Add(new UsedCar(inputCarMake, inputCarModel, inputCarYear, inputCarPrice, inputCarMiles));
-                }
-
+                        ((UsedCar)Car.Cars[MenuNumber - 1]).CarMileage = inputCarMiles;
+                    }
+                }        
             }
             Console.Write("Press any key to continue ...");
             Console.ReadKey();

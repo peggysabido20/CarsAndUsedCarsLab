@@ -33,10 +33,6 @@ namespace CarsAndUsedCarsLab
 
         public static List<Car> Cars = new List<Car>();
 
-        public static List<Car> NewCars = new List<Car>();
-
-        public static List<UsedCar> UsedCars = new List<UsedCar>();
-
         public override string ToString()
         {
             string ToStringOutput = $"{CarMake}\t" +
