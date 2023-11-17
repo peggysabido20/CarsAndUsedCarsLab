@@ -42,10 +42,6 @@ namespace CarsAndUsedCarsLab
             //} while (Car.Cars.Count > 0);
 
 
-
-            //List<Car> cars1 = Car.Cars.Where(l => l.CarMake.Trim() == "GC").ToList();
-
-
             Console.WriteLine("Have a great day!");
         }
     }
